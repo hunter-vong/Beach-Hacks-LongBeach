@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book ISBN</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+    <!-- Recommended Books Section (Top Left) -->
+    <div id="recommended-books-container" class="fade-in">
+        <h3>Recommended Books</h3>
+        <div id="recommended-books"></div>
+    </div>
+
+    <div class="top-bar"></div>
+
+    <h1 class="fade-in">Book ISBN</h1>
+    <p class="fade-in">Search Book By ISBN</p>
+
+    <!-- Flex container for the buttons -->
+    <div class="flex-container fade-in">
+        <div class="right-side" onclick="changeBarContent()">By: Jorden, Hunter, and George</div>
+    </div>
+
+    <!-- Input container for ISBN input field -->
+    <div class="input-container glassmorphic fade-in" id="input-container">
+        <label for="isbn" id="isbn-label-text">Enter ISBN Number:</label>
+        <input type="text" id="isbn" placeholder="ISBN Number">
+        <button onclick="submitISBN()">Submit</button>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loader" id="loading-spinner"></div>
+
+    <!-- Container for displaying the book information -->
+    <div id="book-info" style="display: none;" class="fade-in">
+        <div style="text-align: center;">
+            <img id="book-image" style="max-width: 100%; display: none;" alt="Book Cover">
+        </div>
+        <!-- Book details below the image -->
+        <h2 id="book-title"></h2>
+        <p id="book-author"></p>
+        <p id="book-description"></p>
+    </div>
+
+    <!-- Container for displaying similar books -->
+    <div id="similar-books-container" class="fade-in">
+        <h3>Similar Books</h3>
+        <div id="similar-books"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
